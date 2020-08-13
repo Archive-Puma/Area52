@@ -1,0 +1,58 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    background-image:
+       url("concrete_ceiling.png"),
+       url("concrete_wall.png"),
+       url("concrete_wall.png"),
+       url("concrete_floor.png"),
+       url("bg.gif");
+    background-position:top,left,right,bottom;
+    background-repeat:repeat-x,repeat-y,repeat-y,repeat-x,repeat;
+    background-attachment:fixed,scroll,scroll,fixed,fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.monitor {
+	padding: 1em 3em;
+    text-align: center;
+	border-style: ridge;
+	border-color: beige;
+	border-top-left-radius: 90% 32px;
+	border-top-right-radius: 90% 32px;
+	border-bottom-right-radius: 100% 52px;
+	border-bottom-left-radius: 100% 52px;
+	border-width: 36px 24px 52px;
+	box-shadow:inset 0 0 12px 7px #000;
+
+	color:#ffbf00;
+	background-color:#0f0c00;
+	background-image:repeating-linear-gradient(to bottom, transparent 0 2px, #392a00 2px 3px)
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+input, button {
+    margin: 2px;
+    padding: 10px;
+    color:#5c4500;
+    font-weight: bolder;
+    background-color: beige;
+}
+
+input { width: 60%; }
+button { width: 30%; }

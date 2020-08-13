@@ -1,0 +1,22 @@
+#  █████╗ ██████╗ ███████╗ █████╗     ███████╗██████╗ 
+# ██╔══██╗██╔══██╗██╔════╝██╔══██╗    ██╔════╝╚════██╗
+# ███████║██████╔╝█████╗  ███████║    ███████╗ █████╔╝
+# ██╔══██║██╔══██╗██╔══╝  ██╔══██║    ╚════██║██╔═══╝ 
+# ██║  ██║██║  ██║███████╗██║  ██║    ███████║███████╗
+# ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝    ╚══════╝╚══════╝
+
+# Disable Directory Browsing
+Options All -Indexes
+# Init Reewrite Engine
+RewriteEngine On
+# Deny Access to Hidden Files and Directories
+RewriteCond %{SCRIPT_FILENAME} -d [OR]
+RewriteCond %{SCRIPT_FILENAME} -f
+RewriteRule "(^|/)\." - [F]
+# Deny Access to Backup and Source Files
+<FilesMatch "(\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp)|~)$">
+    Require all denied
+</FilesMatch>
+# Remove index.php from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^$ index.php [NC,L,QSA]

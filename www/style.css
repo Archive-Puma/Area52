@@ -1,0 +1,53 @@
+@keyframes glow { from { opacity: .5; } 50% { opacity: .9; } to { opacity: .5; } }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.flex-cc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    flex-direction: column;
+    color: #db0e15;
+    background: #000 url('bg.png');
+    text-shadow: 0 0 5px rgba(219, 14, 21, .8);
+}
+
+.banner { animation: glow 1.5s infinite; width: 80%; }
+
+h4 { float: right; }
+
+form {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+input, button {
+    width: 500px;
+    margin: 3px;
+    padding: 10px;
+    color: #db0e15cb;
+    border: solid 3px gray;
+    background-color: rgba(17, 17, 17, 0.856);
+    text-shadow: 0 0 5px rgba(219, 14, 21, .8);
+}
+
+button {
+    width: 300px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
