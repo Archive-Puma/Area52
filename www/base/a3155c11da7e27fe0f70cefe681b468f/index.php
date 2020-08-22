@@ -4,7 +4,7 @@
     // Get out of my base!
     isset( $_SESSION['auth'] ) or header('Location: ../../index.php');
     // Check the secret
-    !isset( $_GET['bird'] ) or header('Location: ../');
+    !isset( $_GET['bird'] ) or header('Location: ./ufo');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El pueblo</title>
     <link rel="stylesheet" href="style.css">
+    <!--
+        ¿Nuestros mayor enemigo? ¡Los ROBOTS!
+                            Firmado: ~K
+    -->
 </head>
 <body>
     <img class="x mountains" src="village/mountains.png">
@@ -46,8 +50,6 @@
                `--Y--.___________.--Y--'
                   |==.___________.==|
                   `==.___________.=='
-
-         ¿Nuestros mayor enemigo? ¡Los ROBOTS!
     -->
 
 </body>
